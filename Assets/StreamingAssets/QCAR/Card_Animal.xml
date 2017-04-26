@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="card_woft" size="1.000000 1.363636" />
+    <ImageTarget name="card_stag" size="1.000000 1.363636" />
+    <ImageTarget name="card_fox" size="1.000000 1.363636" />
+    <ImageTarget name="card_rabbit" size="1.000000 1.363636" />
+    <ImageTarget name="card_boar" size="1.000000 1.363636" />
+    <ImageTarget name="card_bear" size="1.000000 1.363636" />
+    <ImageTarget name="card_sheep" size="1.000000 1.363636" />
+    <ImageTarget name="card_cow" size="1.000000 1.363636" />
+    <ImageTarget name="card_chicken" size="1.000000 1.363636" />
+    <ImageTarget name="card_hippo" size="1.000000 1.363636" />
+    <ImageTarget name="card_zebra" size="1.000000 1.363636" />
+    <ImageTarget name="card_Rhino" size="1.000000 1.363636" />
+    <ImageTarget name="card_Lion" size="1.000000 1.363636" />
+    <ImageTarget name="card_Elephant" size="1.000000 1.363636" />
+    <ImageTarget name="card_crocodile" size="1.000000 1.363636" />
+  </Tracking>
+</QCARConfig>

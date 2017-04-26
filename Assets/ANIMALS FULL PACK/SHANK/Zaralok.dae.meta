@@ -1,0 +1,158 @@
+fileFormatVersion: 2
+guid: f1e89a5175c12a44f9cd69680b1b2cde
+timeCreated: 1461225164
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Armature
+    100002: body
+    100004: dorsal_fin_1
+    100006: dorsal_fin_2
+    100008: eyeball_left
+    100010: eyeball_right
+    100012: fluke_1_left
+    100014: fluke_1_right
+    100016: fluke_2_left
+    100018: fluke_2_right
+    100020: fluke_3_left
+    100022: fluke_3_right
+    100024: fluke_4_left
+    100026: fluke_4_right
+    100028: ground
+    100030: head
+    100032: jaw
+    100034: nose
+    100036: pectoral_flipper_1_left
+    100038: pectoral_flipper_1_right
+    100040: pectoral_flipper_2_left
+    100042: pectoral_flipper_2_right
+    100044: pectoral_flipper_3_left
+    100046: pectoral_flipper_3_right
+    100048: pectoral_flipper_4_left
+    100050: pectoral_flipper_4_right
+    100052: spine_1
+    100054: spine_2
+    100056: spine_3
+    100058: spine_4
+    100060: tail_1_left
+    100062: tail_1_right
+    100064: tail_2_left
+    100066: tail_2_right
+    100068: tail_3_left
+    100070: tail_3_right
+    100072: tail_4_left
+    100074: tail_4_right
+    100076: tail_5_left
+    100078: tail_5_right
+    100080: //RootNode
+    100082: Zaralok
+    400000: Armature
+    400002: body
+    400004: dorsal_fin_1
+    400006: dorsal_fin_2
+    400008: eyeball_left
+    400010: eyeball_right
+    400012: fluke_1_left
+    400014: fluke_1_right
+    400016: fluke_2_left
+    400018: fluke_2_right
+    400020: fluke_3_left
+    400022: fluke_3_right
+    400024: fluke_4_left
+    400026: fluke_4_right
+    400028: ground
+    400030: head
+    400032: jaw
+    400034: nose
+    400036: pectoral_flipper_1_left
+    400038: pectoral_flipper_1_right
+    400040: pectoral_flipper_2_left
+    400042: pectoral_flipper_2_right
+    400044: pectoral_flipper_3_left
+    400046: pectoral_flipper_3_right
+    400048: pectoral_flipper_4_left
+    400050: pectoral_flipper_4_right
+    400052: spine_1
+    400054: spine_2
+    400056: spine_3
+    400058: spine_4
+    400060: tail_1_left
+    400062: tail_1_right
+    400064: tail_2_left
+    400066: tail_2_right
+    400068: tail_3_left
+    400070: tail_3_right
+    400072: tail_4_left
+    400074: tail_4_right
+    400076: tail_5_left
+    400078: tail_5_right
+    400080: //RootNode
+    400082: Zaralok
+    4300000: Zaralok
+    9500000: //RootNode
+    13700000: Zaralok
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

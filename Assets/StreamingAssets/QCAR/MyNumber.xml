@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="num_nine" size="863.000000 1066.430420" />
+    <ImageTarget name="num_eight" size="863.000000 1066.430420" />
+    <ImageTarget name="num_seven" size="863.000000 1066.430420" />
+    <ImageTarget name="num_six" size="863.000000 1066.430420" />
+    <ImageTarget name="num_five" size="863.000000 1066.430420" />
+    <ImageTarget name="num_four" size="863.000000 1066.430420" />
+    <ImageTarget name="num_tree" size="863.000000 1066.430420" />
+    <ImageTarget name="num_two" size="863.000000 1066.430420" />
+    <ImageTarget name="num_One" size="683.000000 844.000000" />
+  </Tracking>
+</QCARConfig>
