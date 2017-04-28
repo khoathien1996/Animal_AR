@@ -9,7 +9,7 @@ public class InputHandler : MonoBehaviour {
         o_Parent = transform.parent.gameObject;
 	}
 
-	// hàm này bắt sự kiện click vào cái con vật nhé !
+	// hàm bắt sự kiện click vào con vật
 
     void OnMouseDown()
     {
@@ -22,7 +22,7 @@ public class InputHandler : MonoBehaviour {
                 
                 Interactive.Instance.OnShow(s_ObjectAnimal);
             }
-            AudioManager.Instance.PlayAudioEnglishFromResoures(gameObject.name,false);
+            AudioManager.Instance.PlayAudioEnglishFromResoures(gameObject.name, false);
             //_AudioType a_Audio = (_AudioType)System.Enum.Parse(typeof(_AudioType), o_Parent.name);
             //AudioManager.Instance.PlayAudioByType(a_Audio);
         }
