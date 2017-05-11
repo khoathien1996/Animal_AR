@@ -52,6 +52,7 @@ public class AudioManager : MonoSingleton<AudioManager> {
 
     private const string m_pathAudioEnglish = "Sound/English/";
     private const string m_pathAudioAnimal = "Sound/AnimalSound/";
+    private const string m_pathAudioInteractiveSpeech = "Sound/InteractiveAudio/";
 
     public AudioClip test;
 	// Use this for initialization
@@ -69,6 +70,7 @@ public class AudioManager : MonoSingleton<AudioManager> {
 
     public AudioClip GetAudioFromResources(string _audioName,string _path)
     {
+        print("ten audio : " + _path + _audioName.ToLower());
         return Resources.Load<AudioClip>(_path + _audioName.ToLower());
     }
 
@@ -127,5 +129,67 @@ public class AudioManager : MonoSingleton<AudioManager> {
             m_btnSettingSound.sprite = m_sprSound;
         }
         a_AudioSource.mute = _isMute;
+    }
+
+    public void PlayInteractiveSpeech(string name, string word) {
+        switch (word) {
+            case "What is your name?":
+                StartCoroutine(Play_MyNameIs(name));
+                break;
+            case "How are you?":
+                Play_audio("Iamfine");
+                break;
+            case "hello":
+            case "hi":
+                Play_audio("hello");    //file name is hello
+                break;
+            case "goodbye":
+            case "bye":
+                Play_audio("good_bye"); //file name is goodbye
+                break;
+            case "I am sad":
+            case "I am in sadness":
+                Play_audio("cheer_up");
+                break;
+            case "I am happy":
+            case "I am in happiness":
+                Play_audio("great");
+                break;
+
+            default:               
+                break;
+
+
+
+        }
+
+    }
+    IEnumerator Play_MyNameIs(string name)
+    {
+        AudioClip animal_name = null;
+        AudioClip audioclip = null;
+        audioclip = GetAudioFromResources("mynameis", m_pathAudioInteractiveSpeech);
+        animal_name = GetAudioFromResources(name, m_pathAudioEnglish);
+
+        if (a_AudioSource && !a_AudioSource.isPlaying)
+        {
+            a_AudioSource.clip = animal_name;
+            //print(Time.time);
+            a_AudioSource.PlayOneShot(audioclip);
+
+            yield return new WaitForSeconds(1);
+            //print(Time.time);
+            a_AudioSource.PlayOneShot(animal_name);
+        }
+    }
+
+    public void Play_audio(string word)
+    {
+        AudioClip audioclip = null;
+        audioclip = GetAudioFromResources(word, m_pathAudioInteractiveSpeech);
+        if (a_AudioSource && !a_AudioSource.isPlaying)
+        {
+            a_AudioSource.PlayOneShot(audioclip);
+        }
     }
 }

@@ -10,11 +10,16 @@ public class Interactive : MonoSingleton<Interactive>
     public GameObject content;
 
     public List<GameObject> vuforia;
-    
-	// Use this for initialization
-	void Start () {
+    public AudioClip audio_clip;
+    AudioSource audio;
+
+    // Use this for initialization
+    void Start () {
+        audio = GetComponent<AudioSource>();
+        audio.clip = audio_clip;
+        //audio.PlayOneShot(audio.clip);
         
-	}
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -54,13 +59,32 @@ public class Interactive : MonoSingleton<Interactive>
         this.animal = animal;
     }
     AnimationInfo info;
-    public void OnShow(BaseAnimationManager animal)
+    public void OnShow(BaseAnimationManager animal, string word)
     {
-		//animal.SetAnimationByType (_AnimationState.run);
+        //Khi nao hien len moi noi audio
         if (this.content.active == false)
-		{
-			Debug.Log ("current state" + animal.currState);
-			animal.SetAnimation (animal.getNextState());
+        {
+            switch (word)
+            {
+                case "change":
+                case null:   
+                    animal.SetAnimation(animal.getNextState());
+                    break;
+                case "idle":
+                case "walk":
+                case "run":
+                case "attack":
+                    animal.SetAnimation(word);
+                    break;
+                default:
+                    AudioManager.Instance.PlayInteractiveSpeech(animal.name, word);
+                    break;
+
+            }
+			
+                
+        
+            Debug.Log("current state" + animal.currState);
 
 
             /*Vector3 pos = Input.mousePosition;
@@ -85,8 +109,8 @@ public class Interactive : MonoSingleton<Interactive>
             }
 			*/
 
-			// chổ này em đổi trạng thái của con đó là tấn công hay chạy gì đó
-			// có cái animal -> animal.changeanimation()
+            // chổ này em đổi trạng thái của con đó là tấn công hay chạy gì đó
+            // có cái animal -> animal.changeanimation()
 
         }
     }
