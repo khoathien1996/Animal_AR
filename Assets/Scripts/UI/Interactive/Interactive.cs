@@ -8,32 +8,35 @@ public class Interactive : MonoSingleton<Interactive>
     public Transform transfParent;
     public GameObject btItem;
     public GameObject content;
+    public GameObject text_speech;
 
     public List<GameObject> vuforia;
     public AudioClip audio_clip;
     AudioSource audio;
-
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
+        text_speech.SetActive(false);
         audio = GetComponent<AudioSource>();
         audio.clip = audio_clip;
         //audio.PlayOneShot(audio.clip);
-        
+
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
     private List<GameObject> listBt = new List<GameObject>();
     public void LoadAnimation(List<string> list)
     {
-        foreach(GameObject obj  in this.listBt)
+        foreach (GameObject obj in this.listBt)
         {
             Destroy(obj);
         }
         this.listBt.Clear();
-        for (int i = 0; i < list.Count; i++ )
+        for (int i = 0; i < list.Count; i++)
         {
             string str = list[i];
             GameObject instance = Instantiate(btItem, transfParent) as GameObject;
@@ -50,8 +53,8 @@ public class Interactive : MonoSingleton<Interactive>
     public void OnClick(int index)
     {
         List<string> list = info.getListAnimations();
-		for(int i = 0; i < list.Count; i++)
-			Debug.Log ("Day la list: " + list[i]);
+        for (int i = 0; i < list.Count; i++)
+            Debug.Log("Day la list: " + list[i]);
         animal.SetAnimation(list[index]);
     }
     public void SetAnimal(BaseAnimationManager animal)
@@ -60,14 +63,15 @@ public class Interactive : MonoSingleton<Interactive>
     }
     AnimationInfo info;
     public void OnShow(BaseAnimationManager animal, string word)
-    {
+    {        
         //Khi nao hien len moi noi audio
         if (this.content.active == false)
         {
+            
             switch (word)
             {
                 case "change":
-                case null:   
+                case null:
                     animal.SetAnimation(animal.getNextState());
                     break;
                 case "idle":
@@ -81,9 +85,9 @@ public class Interactive : MonoSingleton<Interactive>
                     break;
 
             }
-			
-                
-        
+
+
+
             Debug.Log("current state" + animal.currState);
 
 
@@ -118,6 +122,6 @@ public class Interactive : MonoSingleton<Interactive>
     {
         this.content.SetActive(false);
     }
-    
-    
+
+
 }

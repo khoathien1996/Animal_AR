@@ -84,7 +84,7 @@ public class ScreenManager : MonoSingleton<ScreenManager>
             for (int i = 0; i < m_arrayMyScreen.Length; i++)
             {
                 m_dicScreen.Add(m_arrayMyScreen[i].m_screenType, m_arrayMyScreen[i].m_objectScreen);
-                m_arrayMyScreen[i].m_objectScreen.SetActive(false);
+                //m_arrayMyScreen[i].m_objectScreen.SetActive(false);
             }
         }
 

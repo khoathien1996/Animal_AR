@@ -73,7 +73,7 @@ ModelImporter:
     400062: CROCODILE_ Tail4
     400064: CROCODILE_ Tail5
     400066: CROCODILE_ Tail6
-    7400000: Take 001
+    7400000: walkBite
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -95,7 +95,134 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: walkBite
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: CROCODILE_
+        weight: 1
+      - path: CROCODILE_/CROCODILE_ Pelvis
+        weight: 1
+      - path: CROCODILE_/CROCODILE_ Pelvis/CROCODILE_ Spine
+        weight: 1
+      - path: CROCODILE_/CROCODILE_ Pelvis/CROCODILE_ Spine/CROCODILE_ L Thigh
+        weight: 1
+      - path: CROCODILE_/CROCODILE_ Pelvis/CROCODILE_ Spine/CROCODILE_ L Thigh/CROCODILE_
+          L Calf
+        weight: 1
+      - path: CROCODILE_/CROCODILE_ Pelvis/CROCODILE_ Spine/CROCODILE_ L Thigh/CROCODILE_
+          L Calf/CROCODILE_ L Foot
+        weight: 1
+      - path: CROCODILE_/CROCODILE_ Pelvis/CROCODILE_ Spine/CROCODILE_ L Thigh/CROCODILE_
+          L Calf/CROCODILE_ L Foot/CROCODILE_ L Toe0
+        weight: 1
+      - path: CROCODILE_/CROCODILE_ Pelvis/CROCODILE_ Spine/CROCODILE_ R Thigh
+        weight: 1
+      - path: CROCODILE_/CROCODILE_ Pelvis/CROCODILE_ Spine/CROCODILE_ R Thigh/CROCODILE_
+          R Calf
+        weight: 1
+      - path: CROCODILE_/CROCODILE_ Pelvis/CROCODILE_ Spine/CROCODILE_ R Thigh/CROCODILE_
+          R Calf/CROCODILE_ R Foot
+        weight: 1
+      - path: CROCODILE_/CROCODILE_ Pelvis/CROCODILE_ Spine/CROCODILE_ R Thigh/CROCODILE_
+          R Calf/CROCODILE_ R Foot/CROCODILE_ R Toe0
+        weight: 1
+      - path: CROCODILE_/CROCODILE_ Pelvis/CROCODILE_ Spine/CROCODILE_ Spine1
+        weight: 1
+      - path: CROCODILE_/CROCODILE_ Pelvis/CROCODILE_ Spine/CROCODILE_ Spine1/CROCODILE_
+          Neck
+        weight: 1
+      - path: CROCODILE_/CROCODILE_ Pelvis/CROCODILE_ Spine/CROCODILE_ Spine1/CROCODILE_
+          Neck/CROCODILE_ L Clavicle
+        weight: 1
+      - path: CROCODILE_/CROCODILE_ Pelvis/CROCODILE_ Spine/CROCODILE_ Spine1/CROCODILE_
+          Neck/CROCODILE_ L Clavicle/CROCODILE_ L UpperArm
+        weight: 1
+      - path: CROCODILE_/CROCODILE_ Pelvis/CROCODILE_ Spine/CROCODILE_ Spine1/CROCODILE_
+          Neck/CROCODILE_ L Clavicle/CROCODILE_ L UpperArm/CROCODILE_ L Forearm
+        weight: 1
+      - path: CROCODILE_/CROCODILE_ Pelvis/CROCODILE_ Spine/CROCODILE_ Spine1/CROCODILE_
+          Neck/CROCODILE_ L Clavicle/CROCODILE_ L UpperArm/CROCODILE_ L Forearm/CROCODILE_
+          L Hand
+        weight: 1
+      - path: CROCODILE_/CROCODILE_ Pelvis/CROCODILE_ Spine/CROCODILE_ Spine1/CROCODILE_
+          Neck/CROCODILE_ L Clavicle/CROCODILE_ L UpperArm/CROCODILE_ L Forearm/CROCODILE_
+          L Hand/CROCODILE_ L Finger0
+        weight: 1
+      - path: CROCODILE_/CROCODILE_ Pelvis/CROCODILE_ Spine/CROCODILE_ Spine1/CROCODILE_
+          Neck/CROCODILE_ Neck1
+        weight: 1
+      - path: CROCODILE_/CROCODILE_ Pelvis/CROCODILE_ Spine/CROCODILE_ Spine1/CROCODILE_
+          Neck/CROCODILE_ Neck1/CROCODILE_ Head
+        weight: 1
+      - path: CROCODILE_/CROCODILE_ Pelvis/CROCODILE_ Spine/CROCODILE_ Spine1/CROCODILE_
+          Neck/CROCODILE_ Neck1/CROCODILE_ Head/CROCODILE_ Queue de cheval 1
+        weight: 1
+      - path: CROCODILE_/CROCODILE_ Pelvis/CROCODILE_ Spine/CROCODILE_ Spine1/CROCODILE_
+          Neck/CROCODILE_ R Clavicle
+        weight: 1
+      - path: CROCODILE_/CROCODILE_ Pelvis/CROCODILE_ Spine/CROCODILE_ Spine1/CROCODILE_
+          Neck/CROCODILE_ R Clavicle/CROCODILE_ R UpperArm
+        weight: 1
+      - path: CROCODILE_/CROCODILE_ Pelvis/CROCODILE_ Spine/CROCODILE_ Spine1/CROCODILE_
+          Neck/CROCODILE_ R Clavicle/CROCODILE_ R UpperArm/CROCODILE_ R Forearm
+        weight: 1
+      - path: CROCODILE_/CROCODILE_ Pelvis/CROCODILE_ Spine/CROCODILE_ Spine1/CROCODILE_
+          Neck/CROCODILE_ R Clavicle/CROCODILE_ R UpperArm/CROCODILE_ R Forearm/CROCODILE_
+          R Hand
+        weight: 1
+      - path: CROCODILE_/CROCODILE_ Pelvis/CROCODILE_ Spine/CROCODILE_ Spine1/CROCODILE_
+          Neck/CROCODILE_ R Clavicle/CROCODILE_ R UpperArm/CROCODILE_ R Forearm/CROCODILE_
+          R Hand/CROCODILE_ R Finger0
+        weight: 1
+      - path: CROCODILE_/CROCODILE_ Pelvis/CROCODILE_ Spine/CROCODILE_ Tail
+        weight: 1
+      - path: CROCODILE_/CROCODILE_ Pelvis/CROCODILE_ Spine/CROCODILE_ Tail/CROCODILE_
+          Tail1
+        weight: 1
+      - path: CROCODILE_/CROCODILE_ Pelvis/CROCODILE_ Spine/CROCODILE_ Tail/CROCODILE_
+          Tail1/CROCODILE_ Tail2
+        weight: 1
+      - path: CROCODILE_/CROCODILE_ Pelvis/CROCODILE_ Spine/CROCODILE_ Tail/CROCODILE_
+          Tail1/CROCODILE_ Tail2/CROCODILE_ Tail3
+        weight: 1
+      - path: CROCODILE_/CROCODILE_ Pelvis/CROCODILE_ Spine/CROCODILE_ Tail/CROCODILE_
+          Tail1/CROCODILE_ Tail2/CROCODILE_ Tail3/CROCODILE_ Tail4
+        weight: 1
+      - path: CROCODILE_/CROCODILE_ Pelvis/CROCODILE_ Spine/CROCODILE_ Tail/CROCODILE_
+          Tail1/CROCODILE_ Tail2/CROCODILE_ Tail3/CROCODILE_ Tail4/CROCODILE_ Tail5
+        weight: 1
+      - path: CROCODILE_/CROCODILE_ Pelvis/CROCODILE_ Spine/CROCODILE_ Tail/CROCODILE_
+          Tail1/CROCODILE_ Tail2/CROCODILE_ Tail3/CROCODILE_ Tail4/CROCODILE_ Tail5/CROCODILE_
+          Tail6
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []

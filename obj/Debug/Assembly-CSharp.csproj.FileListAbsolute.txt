@@ -80,3 +80,8 @@ D:\Git\Animal_AR\Temp\bin\Debug\Vuforia.UnityExtensions.xml
 D:\Git\Animal_AR\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
 D:\Git\Animal_AR\obj\Debug\Assembly-CSharp.dll
 D:\Git\Animal_AR\obj\Debug\Assembly-CSharp.pdb
+D:\Git\Animal_AR\Temp\bin\Debug\HtmlAgilityPack.dll
+D:\Git\Animal_AR\Temp\bin\Debug\OSCsharp.dll
+D:\Git\Animal_AR\Temp\bin\Debug\TUIOsharp.dll
+D:\Git\Animal_AR\Temp\bin\Debug\HtmlAgilityPack.pdb
+D:\Git\Animal_AR\Temp\bin\Debug\HtmlAgilityPack.xml

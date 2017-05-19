@@ -78,11 +78,11 @@ ModelImporter:
     4300000: STANDARD_WOLF
     7400000: idleLookAround
     7400002: idle
-    7400004: attack
+    7400004: howl
     7400006: walk
     7400008: run
     7400010: runBite
-    7400012: standBite
+    7400012: attack
     7400014: getHit
     7400016: death
     7400018: dead
@@ -166,7 +166,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: attack
+      name: howl
       takeName: 
       firstFrame: 375
       lastFrame: 460
@@ -278,7 +278,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: standBite
+      name: attack
       takeName: 
       firstFrame: 566
       lastFrame: 586

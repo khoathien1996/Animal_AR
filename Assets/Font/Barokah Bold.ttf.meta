@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 59cc65622e7a81c47b039be335afa154
+timeCreated: 1494861557
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Barokah
+  fontNames:
+  - Barokah
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 59d009bd9247e1546ba92baf4846b707, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -18,15 +18,15 @@ namespace Vuforia
         public GameObject m_objAnimal;
 
         #region PRIVATE_MEMBER_VARIABLES
- 
+
         private TrackableBehaviour mTrackableBehaviour;
-    
+
         #endregion // PRIVATE_MEMBER_VARIABLES
 
 
 
         #region UNTIY_MONOBEHAVIOUR_METHODS
-    
+
         void Start()
         {
             mTrackableBehaviour = GetComponent<TrackableBehaviour>();
@@ -78,7 +78,8 @@ namespace Vuforia
         #region PRIVATE_METHODS
         public void OnTrackingFound()
         {
-            if(!GameConfig.m_isStart)
+            Debug.Log("Da tracking dc");
+            if (!GameConfig.m_isStart)
             {
                 return;
             }
@@ -87,8 +88,8 @@ namespace Vuforia
                 m_objAnimal.SetActive(true);
             }
             Controller.Instance.AddAnimalTracked(m_objAnimal.transform.GetChild(0).gameObject);
-            ManagerObject.Instance.SpawnObjectByType(ObjectType.PARTICLE,PoolName.pool);
-            
+            ManagerObject.Instance.SpawnObjectByType(ObjectType.PARTICLE, PoolName.pool);
+
         }
 
 

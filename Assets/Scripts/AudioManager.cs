@@ -42,11 +42,12 @@ public class AudioConfig
     public AudioClip a_Clip;
     public _AudioType a_Type;
 }
-public class AudioManager : MonoSingleton<AudioManager> {
+public class AudioManager : MonoSingleton<AudioManager>
+{
 
     public List<AudioConfig> l_ListAudio = new List<AudioConfig>();
 
-    private Dictionary<_AudioType, AudioClip> d_DictionaryAudio = new Dictionary<_AudioType,AudioClip>();
+    private Dictionary<_AudioType, AudioClip> d_DictionaryAudio = new Dictionary<_AudioType, AudioClip>();
 
     public AudioSource a_AudioSource;
 
@@ -55,35 +56,36 @@ public class AudioManager : MonoSingleton<AudioManager> {
     private const string m_pathAudioInteractiveSpeech = "Sound/InteractiveAudio/";
 
     public AudioClip test;
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start()
+    {
         InitDictionary();
-	}
-	
+    }
+
     private void InitDictionary()
     {
-        foreach(AudioConfig audio in l_ListAudio)
+        foreach (AudioConfig audio in l_ListAudio)
         {
             d_DictionaryAudio.Add(audio.a_Type, audio.a_Clip);
         }
     }
 
-    public AudioClip GetAudioFromResources(string _audioName,string _path)
+    public AudioClip GetAudioFromResources(string _audioName, string _path)
     {
         print("ten audio : " + _path + _audioName.ToLower());
         return Resources.Load<AudioClip>(_path + _audioName.ToLower());
     }
 
-    public void PlayAudioEnglishFromResoures(string _audioName,bool _isPlayName = true)
+    public void PlayAudioEnglishFromResoures(string _audioName, bool _isPlayName = true)
     {
-        AudioClip audioClip=null;
+        AudioClip audioClip = null;
         if (_isPlayName)
         {
             audioClip = GetAudioFromResources(_audioName, m_pathAudioEnglish);
         }
         else
         {
-            audioClip = GetAudioFromResources(_audioName, m_pathAudioAnimal); 
+            audioClip = GetAudioFromResources(_audioName, m_pathAudioAnimal);
         }
         if (a_AudioSource && !a_AudioSource.isPlaying)
         {
@@ -94,7 +96,7 @@ public class AudioManager : MonoSingleton<AudioManager> {
 
     public AudioClip GetAudioClipByType(_AudioType type)
     {
-        if(d_DictionaryAudio.ContainsKey(type))
+        if (d_DictionaryAudio.ContainsKey(type))
         {
             return d_DictionaryAudio[type];
         }
@@ -107,7 +109,7 @@ public class AudioManager : MonoSingleton<AudioManager> {
     public void PlayAudioByType(_AudioType type)
     {
         AudioClip audioClip = GetAudioClipByType(type);
-        if(a_AudioSource && !a_AudioSource.isPlaying)
+        if (a_AudioSource && !a_AudioSource.isPlaying)
         {
             a_AudioSource.clip = audioClip;
             a_AudioSource.PlayOneShot(audioClip);
@@ -120,7 +122,7 @@ public class AudioManager : MonoSingleton<AudioManager> {
 
     public void SettingSound(bool _isMute = true)
     {
-        if(_isMute)
+        if (_isMute)
         {
             m_btnSettingSound.sprite = m_sprSoundMute;
         }
@@ -131,38 +133,58 @@ public class AudioManager : MonoSingleton<AudioManager> {
         a_AudioSource.mute = _isMute;
     }
 
-    public void PlayInteractiveSpeech(string name, string word) {
-        switch (word) {
-            case "What is your name?":
+    public void PlayInteractiveSpeech(string name, string word)
+    {
+        bool isDefault = false;
+        GameObject speech_text = Interactive.Instance.text_speech;
+        Text text = speech_text.transform.GetChild(0).gameObject.GetComponent<Text>();
+
+        switch (word)
+        {
+            case "what is your name":
                 StartCoroutine(Play_MyNameIs(name));
+                text.text = "My name is " + name.ToUpper();
                 break;
-            case "How are you?":
+            case "how are you":
+                text.text = "I'm fine, thank you!";
                 Play_audio("Iamfine");
                 break;
             case "hello":
             case "hi":
+                text.text = "Hello!";
                 Play_audio("hello");    //file name is hello
                 break;
             case "goodbye":
             case "bye":
+                text.text = "Goodbye and see you again!";
                 Play_audio("good_bye"); //file name is goodbye
                 break;
-            case "I am sad":
-            case "I am in sadness":
+            case "i am sad":
+            case "i am in sadness":
+                text.text = "Cheer up!";
                 Play_audio("cheer_up");
                 break;
-            case "I am happy":
-            case "I am in happiness":
+            case "i am happy":
+            case "i am in happiness":
+                text.text = "Great! Congratulation!";
                 Play_audio("great");
                 break;
-
-            default:               
+            default:
+                isDefault = true;
                 break;
-
-
-
+        }
+        if (!isDefault)
+        {
+            speech_text.SetActive(true);
+            StartCoroutine(AutoHide(speech_text, 2));
         }
 
+    }
+
+    IEnumerator AutoHide(GameObject gameobject, int second)
+    {
+        yield return new WaitForSeconds(second);
+        gameobject.SetActive(false);
     }
     IEnumerator Play_MyNameIs(string name)
     {
